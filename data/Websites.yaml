@@ -1,0 +1,17 @@
+header: Websites
+type: links
+icon: fa-brands fa-chrome
+icon-color: SeaGreen
+links:
+  - name: FurAffinity
+    url: https://www.furaffinity.net/user/indigobx/
+    image: assets/images/Fur_Affinity_Logo.png
+  - name: Telegram Group
+    url: https://t.me/coffea_iu
+    image: assets/images/Telegram_2019_Logo.svg
+  - name: e621
+    url: https://e621.net/artists/88035
+    image: assets/images/E621_logo.svg
+  - name: X (Twitter)
+    url: https://twitter.com/uzuridazzle
+    image: assets/images/X_Logo_white.svg

@@ -1,0 +1,17 @@
+header: Pricing
+type: pricing
+items:
+  - name: Draft
+    name_ru: Черновик
+    description: Draft
+    description_ru: Черновик
+    price: 0
+    image_url: assets/images/draft.jpg
+    example_url: https://www.furaffinity.net/view/53599689/
+  - name: Rough Shading
+    name_ru: Грубый шейдинг
+    description: Rough Shading
+    description_ru: Грубый шейдинг
+    price: 20
+    image_url: assets/images/rough_shading.jpg
+    example_url: https://www.furaffinity.net/view/55006257/

@@ -1,0 +1,131 @@
+/* Основной фон страницы */
+body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Фон карточек */
+.card {
+  background-color: #1e1e1e;
+}
+
+/* Текстовые заголовки карточек */
+.card-title {
+  color: #ffffff;
+}
+
+/* Цвет контента карточки */
+.card-content p {
+  color: #b0bec5;
+}
+
+/* Кнопки */
+.btn, .btn-large {
+  background-color: #37474f;
+  color: #ffffff;
+}
+
+.btn:hover, .btn-large:hover {
+  background-color: #546e7a;
+}
+
+/* Поля ввода */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  background-color: #2e2e2e;
+  color: #ffffff;
+  border: 1px solid #424242;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+  border: 1px solid #64b5f6;
+}
+
+/* Иконки */
+i.fa {
+  color: #64b5f6; /* Основной цвет для иконок */
+}
+
+/* Линии подчеркивания */
+.input-field .prefix.active {
+  color: #64b5f6;
+}
+
+.input-field input:focus + label {
+  color: #64b5f6;
+}
+
+/* Контейнер для ссылок */
+.links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+/* Стили для каждой ссылки */
+.link-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff; /* Цвет текста ссылок, можно изменить */
+  padding: 5px;
+  transition: background-color 0.3s;
+}
+
+.link-item:hover {
+  background-color: #37474f; /* Цвет фона при наведении */
+}
+
+/* Общий стиль для иконок Font Awesome и изображений */
+.link-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Специальный стиль для Font Awesome иконок */
+.fa, .fa-brands, .fa-solid {
+  font-size: 24px; /* Увеличенный размер шрифта для Font Awesome */
+  color: inherit; /* Цвет будет установлен через inline-стиль */
+}
+
+
+/* Стиль контейнера для карточек pricing */
+.pricing-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Стиль для каждого элемента pricing */
+.pricing-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Стиль для заголовка элемента */
+.pricing-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+/* Стиль для описания */
+.pricing-description {
+  margin-bottom: 10px;
+}
+
+/* Контейнер для цен */
+.pricing-price-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Стиль для каждой цены */
+.pricing-price {
+  font-size: 1.1em;
+  font-weight: bold;
+}

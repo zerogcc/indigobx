@@ -1,0 +1,7 @@
+header: this is header
+type: text
+content: |
+  This is multiline text
+  And this is another line
+icon: fa-user
+icon-color: blue
