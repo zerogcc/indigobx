@@ -7,9 +7,14 @@ top: |
   All listed prices are for one character per single frame.
   Additional characters or elements, such as detailed backgrounds or complex features, are calculated as add-ons based on the base price.
 bottom: |
-  Prices in euros and rubles are calculated based on the 
-  <a href="https://www.cbr-xml-daily.ru/daily_json.js">Central Bank of Russia's exchange rate</a>
-  and are <u>fixed on the day of payment</u> to ensure transparency and accuracy.
+  <span>
+    If your budget is limited, I'm happy to discuss different combinations of quality and details to find a solution that works for us both.
+  </span><br />
+  <span>
+    Prices in euros and rubles are calculated based on the 
+    <a href="https://www.cbr-xml-daily.ru/daily_json.js">Central Bank of Russia's exchange rate</a>
+    and are <u>fixed on the day of payment</u> to ensure transparency and accuracy.
+  </span>
 items:
   - name: Comic Shading
     name_ru: Черновик
