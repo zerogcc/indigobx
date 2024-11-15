@@ -14,6 +14,10 @@ body {
   color: #ffffff;
 }
 
+.card-title i {
+  width: 1.5em;
+}
+
 /* Цвет контента карточки */
 .card-content p {
   color: #b0bec5;
@@ -91,7 +95,32 @@ i.fa {
 }
 
 
-/* Стиль контейнера для карточек pricing */
+/* Стиль для текста над ценами */
+.pricing-top {
+  font-size: 1em;
+  margin-bottom: 10px;
+  font-weight: 100;
+  color: Gray;
+}
+
+/* Стиль для текста под ценами */
+.pricing-bottom {
+  font-size: 1em;
+  margin-top: 10px;
+  color: Pink;
+  font-weight: 100;
+}
+
+.pricing-bottom a {
+  color: Plum;
+  text-decoration: underline;
+}
+.pricing-bottom a:hover {
+  color: HotPink;
+  background-color: #604;
+}
+
+/* Стиль для карточек pricing */
 .pricing-container {
   display: flex;
   flex-direction: column;
@@ -108,14 +137,44 @@ i.fa {
 
 /* Стиль для заголовка элемента */
 .pricing-title {
-  font-weight: bold;
+  font-weight: 200;
   font-size: 1.2em;
   margin-bottom: 5px;
 }
 
+/* Заголовок карточки цен */
+.pricing-header {
+  font-size: 1.5em;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+/* Контент описания и ссылок */
+.pricing-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
 /* Стиль для описания */
 .pricing-description {
-  margin-bottom: 10px;
+  flex: 1;
+  /* color: #aab; */
+  color: gainsboro;
+  font-weight: 400;
+}
+
+/* Ссылки справа от описания */
+.pricing-links {
+  margin-left: 10px;
+  font-size: 0.9em;
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 /* Контейнер для цен */
@@ -127,5 +186,43 @@ i.fa {
 /* Стиль для каждой цены */
 .pricing-price {
   font-size: 1.1em;
+  font-weight: 600;
+  color: #ced;
+}
+
+.pricing-price.eur {
+  color: #dec;
+}
+
+.pricing-price.rub {
+  color: #dbb;
+}
+
+/* Модификатор цены */
+.pricing-modifier {
+  font-size: 1.1em;
   font-weight: bold;
+  color: #ade; /* Серый цвет */
+  text-align: center;
+}
+
+/* Стили ссылок */
+.pricing-link {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.pricing-link:hover {
+  text-decoration: underline;
+}
+
+.extra-option {
+  padding-left: 1em;
+  display: flex;
+}
+
+.extra-option::before {
+  content: "◢";
+  color: #6c757d;
+  margin-right: 0.8em;
 }

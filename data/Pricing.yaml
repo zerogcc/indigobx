@@ -1,17 +1,89 @@
 header: Pricing
 type: pricing
+icon: fa fa-dollar-sign
+icon-color: Goldenrod
+top: |
+  Per Character, Per Frame:
+  All listed prices are for one character per single frame.
+  Additional characters or elements, such as detailed backgrounds or complex features, are calculated as add-ons based on the base price.
+bottom: |
+  Prices in euros and rubles are calculated based on the 
+  <a href="https://www.cbr-xml-daily.ru/daily_json.js">Central Bank of Russia's exchange rate</a>
+  and are <u>fixed on the day of payment</u> to ensure transparency and accuracy.
 items:
-  - name: Draft
+  - name: Comic Shading
     name_ru: Черновик
-    description: Draft
+    description: |
+      A bold and expressive style with simple shading and clean lines, reminiscent of classic comics. Ideal for showcasing characters without intricate details or complex lighting.
     description_ru: Черновик
-    price: 0
-    image_url: assets/images/draft.jpg
-    example_url: https://www.furaffinity.net/view/53599689/
-  - name: Rough Shading
+    price: 40
+    # example_url: assets/images/draft.jpg
+    # example_icon: fa fa-paint-brush
+    # finished_url: https://www.furaffinity.net/view/53599689/
+    # finished_icon: fa fa-paint-brush
+  - name: Retro Style Shading
     name_ru: Грубый шейдинг
-    description: Rough Shading
+    description: |
+      Inspired by the aesthetic of the '80s and '90s, this style features textured shadows, grain effects, and neon accents. Perfect for adding a nostalgic charm to your character.
     description_ru: Грубый шейдинг
-    price: 20
-    image_url: assets/images/rough_shading.jpg
-    example_url: https://www.furaffinity.net/view/55006257/
+    price: 40
+    # example_url: assets/images/rough_shading.jpg
+    # example_icon: fa fa-paint-brush
+    # finished_url: https://www.furaffinity.net/view/55006257/
+    # finished_icon: fa fa-paint-brush
+  - name: Sketchy Shading
+    description: |
+      A softer, more dynamic shading style with a focus on depth and volume. This is a great choice for those who want a balance between expressiveness and detail.
+    price: 60
+  - name: Full Shading
+    description: |
+      The highest level of detail, featuring complex lighting, deep shadows, and rich textures. Perfect for premium works where realism and intricacy are key.
+    price: 80
+
+  - name: Simple Background
+    description: |
+      A minimalist background or plain color that does not distract from the character.
+    price: included for free
+  - name: Blurred Background (Depth of Field Effect)
+    description: |
+      A light, blurred background with a depth-of-field effect that adds atmosphere and focus to the character.
+    price: +25% of the base price
+  - name: Detailed Background
+    description: |
+      A fully-rendered, highly detailed background with layered elements and environmental storytelling.
+    price: +50% to +100% of the base price
+  
+  - name: Complex Characters/Views
+    description: |
+      <span class="extra-option">
+        For characters with intricately detailed wings, whether feathered, bat-like, or other styles,
+        rendered with precision to showcase texture and anatomy,
+        detailed scales that add a rich texture to the character, perfect for dragons, reptiles, or fish-like designs.
+      </span>
+      <span class="extra-option">
+        Unconventional anatomy or body shapes that require additional work,
+        such as multiple limbs, unique skeletal structures, or hybrid forms.
+      </span>
+      <span class="extra-option">
+        A specialized view showing the internal structure of the character
+        (e.g., organs, bones, or mechanical parts), requiring detailed internal and external rendering.
+      </span>
+    price: +50% to +150% of the base price
+
+  - name: Referece Sheet Full-Body Crop
+    description: |
+      An additional full-body crop of the character rendered with the same level of detail as the main artwork.
+    price: +50% to +100% of the base price, depending on character complexity
+  - name: Referece Sheet Half-Body Crop
+    description: |
+      A half-body crop (e.g., upper torso) rendered in the same or simpler quality, depending on client preference.
+    price: +25% to +50% of the base price
+  - name: Referece Sheet Detail Close-Up
+    description: |
+      A close-up of specific details, such as the hands, eyes, or accessories, rendered in the same quality as the main artwork.
+    price: +20% of the base price
+  
+  - name: Comic Discount
+    description: |
+      For comics with 3 or more panels, the final price is discounted.
+    price: -20% of the final price

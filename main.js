@@ -124,35 +124,65 @@ function renderPricingCard(item) {
     return '';
   }
 
+  // Генерация элементов прайсинга
   const pricingItems = item.items.map(pricing => {
-    // Конвертация цены
-    const priceUSD = pricing.price;
-    const priceEUR = (priceUSD * exchangeRates.EUR).toFixed(2);
-    const priceRUB = Math.ceil(priceUSD * exchangeRates.RUB);
+    // Проверяем, является ли цена модификатором
+    const priceContent =
+      typeof pricing.price === 'string'
+        ? `<div class="pricing-modifier">${pricing.price}</div>`
+        : `<div class="pricing-price-container">
+             <div class="pricing-price usd">$${pricing.price}</div>
+             <div class="pricing-price eur">€${(pricing.price * exchangeRates.EUR).toFixed(2)}</div>
+             <div class="pricing-price rub">₽${Math.ceil(pricing.price * exchangeRates.RUB)}</div>
+           </div>`;
+
+    // Обработка ссылок с иконками
+    const links = [];
+    if (pricing.example_url) {
+      links.push(`
+        <a href="${pricing.example_url}" target="_blank" class="link-item">
+          ${pricing.example_icon ? `<i class="${pricing.example_icon} link-icon"></i>` : ''}
+          <span>Example</span>
+        </a>
+      `);
+    }
+    if (pricing.finished_url) {
+      links.push(`
+        <a href="${pricing.finished_url}" target="_blank" class="link-item">
+          ${pricing.finished_icon ? `<i class="${pricing.finished_icon} link-icon"></i>` : ''}
+          <span>Finished</span>
+        </a>
+      `);
+    }
+    const linksContent = links.length > 0 ? `<div class="pricing-links">${links.join('')}</div>` : '';
 
     return `
       <div class="pricing-item">
         <div class="pricing-title">${pricing.name}</div>
-        <div class="pricing-description">${pricing.description}</div>
-        <div class="pricing-price-container">
-          <div class="pricing-price">$${priceUSD}</div>
-          <div class="pricing-price">€${priceEUR}</div>
-          <div class="pricing-price">₽${priceRUB}</div>
+        <div class="pricing-content">
+          <div class="pricing-description">${pricing.description}</div>
+          ${linksContent}
         </div>
+        ${priceContent}
       </div>
     `;
   }).join('');
 
+  // Генерация карточки с заголовком и текстами top/bottom
   return `
     <div class="card">
       <div class="card-content">
-        <span class="card-title">${item.header}</span>
+        <span class="card-title">
+          ${item.icon ? `<i class="${item.icon}" style="color: ${item['icon-color']}"></i>` : ''}
+          ${item.header}
+        </span>
+        <div class="pricing-top">${item.top || ''}</div>
         <div class="pricing-container">${pricingItems}</div>
+        <div class="pricing-bottom">${item.bottom || ''}</div>
       </div>
     </div>
   `;
 }
-
 
 
 
