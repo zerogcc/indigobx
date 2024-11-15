@@ -58,6 +58,7 @@ i.fa {
   color: #64b5f6;
 }
 
+
 /* Контейнер для ссылок */
 .links-container {
   display: flex;
@@ -225,4 +226,56 @@ i.fa {
   content: "◢";
   color: #6c757d;
   margin-right: 0.8em;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  font-weight: 100;
+}
+
+.mono-text {
+  font-family: monospace;
+  font-weight: 100;
+  color: #aaa;
+}
+
+.mono-text b {
+  color: #fff;
+}
+
+.mono-text i {
+  color: #aab0b9;
+}
+
+.pan-flag {
+  color: DeepPink;
+}
+
+.pan-flag:nth-child(2) {
+  color: Gold;
+}
+
+.pan-flag:nth-child(3) {
+  color: DeepSkyBlue;
+}
+
+.yes {
+  color: LightGreen;
+}
+
+.yes2 {
+  color: PowderBlue;
+}
+
+.maybe {
+  color: PaleGoldenrod;
+}
+
+.no {
+  color: LightPink;
+}
+
+.strictly-no {
+  color: Thistle;
 }

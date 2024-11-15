@@ -79,7 +79,7 @@ function renderTextCard(item) {
         <span class="card-title">
           <i class="${item.icon}" style="color: ${item['icon-color']}"></i> ${item.header}
         </span>
-        <p>${item.content}</p>
+        <div class="card-text">${item.content}</div>
       </div>
     </div>
   `;

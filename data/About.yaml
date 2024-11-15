@@ -1,7 +1,29 @@
-header: About me
+header: About me (a lot of messy text)
 type: text
 content: |
-  Hi, I'm furry artist.
-  I love to draw and make art.
+  <div>
+    indigobx | doggy | 
+    <span class="pan-flag">p</span><span class="pan-flag">a</span><span class="pan-flag">n</span>
+     | GMT+3 | russian (native) | english
+  </div>
+  <div>
+  commissions <span class="yes">open</span> |
+  collabs <span class="maybe">discussible</span> | 
+  trades <span class="maybe">discussible</span> | 
+  requests <span class="maybe">friends only</span>
+  </div>
+  <div>
+   <span class="yes">do</span>
+    pregnancy | mpreg | inflation | bondage | space | zero-g and underwater | femboys | crossdressing
+  </div>
+  <div>
+    <span class="yes2">also do</span>
+    breathplay | domination | action shots | comics | reference sheets | all not in dont list
+  </div>
+  <div>
+    <span class="no">dont do</span>
+    vore | scat | bursting | watersports | underage nsfw
+    </span>
+  </div>
 icon: fa fa-paw
 icon-color: hotpink
