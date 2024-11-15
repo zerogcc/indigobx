@@ -8,7 +8,7 @@ links:
     icon: fa fa-paper-plane
   - name: PM at FurAffinity
     url: https://www.furaffinity.net/newpm/indigobx/
-    image: assets/images/Fur_Affinity_Logo_white.png
+    icon: fa fa-paw
   - name: Discord (not available)
     url: https://discord.com/users/indigobx
     icon: fa-brands fa-discord

@@ -5,7 +5,7 @@ icon-color: SeaGreen
 links:
   - name: FurAffinity
     url: https://www.furaffinity.net/user/indigobx/
-    image: assets/images/Fur_Affinity_Logo_white.png
+    icon: fa fa-paw
   - name: Telegram Group
     url: https://t.me/coffea_iu
     icon: fa-brands fa-telegram
