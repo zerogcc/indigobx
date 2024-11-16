@@ -1,39 +1,66 @@
+let currentLanguage = 'en'; // Язык по умолчанию
+
+// Получение текущего языка из URL
+function getLanguageFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('lang') || 'en';
+}
+
+// Установка языка и обновление отображения
+function setLanguage(lang) {
+  currentLanguage = lang;
+
+  // Обновление URL с параметром `lang`
+  const params = new URLSearchParams(window.location.search);
+  params.set('lang', lang);
+  window.history.replaceState({}, '', `${window.location.pathname}?${params.toString()}`);
+
+  // Обновление стиля кнопок выбора языка
+  document.querySelectorAll('.language-select a').forEach(btn => {
+    if (btn.getAttribute('data-lang') === lang) {
+      // btn.style.backgroundColor = 'transparent';
+      btn.style.color = 'inherit';
+      btn.style.opacity = '0.6'; // Слабее выделение
+    } else {
+      btn.style.backgroundColor = '';
+      btn.style.color = '#ffffff';
+      btn.style.opacity = '1';
+    }
+  });
+
+  // Изменение фона страницы в зависимости от языка
+  document.body.style.color = lang === 'en' ? '#eef' : '#fee';
+
+  // Загрузка файлов для выбранного языка
+  fetchYAMLFiles();
+}
+
+// Загрузка YAML файлов для выбранного языка
 async function fetchYAMLFiles() {
-  // Список файлов для загрузки
+  const folder = currentLanguage === 'en' ? 'data_en' : 'data_ru';
   const files = [
-    'data/About.yaml',
-    'data/Contacts.yaml',
-    'data/Websites.yaml',
-    'data/Pricing.yaml'
+    `${folder}/About.yaml`,
+    `${folder}/Contacts.yaml`,
+    `${folder}/Websites.yaml`,
+    `${folder}/Pricing.yaml`
   ];
-  
-  // Загружаем каждый файл YAML с помощью fetch и преобразуем его в объект
+
   const dataPromises = files.map(async (file) => {
     const response = await fetch(file);
-    
     if (!response.ok) {
       console.error(`Не удалось загрузить ${file}: ${response.statusText}`);
       return null;
     }
-
     const yamlText = await response.text();
-    const yamlData = jsyaml.load(yamlText);
-    
-    // Извлекаем порядок из названия файла (числа до первого подчеркивания)
-    // yamlData.order = parseInt(file.match(/\d+/)[0]);
-    return yamlData;
+    return jsyaml.load(yamlText);
   });
 
-  // Ждем загрузки всех файлов и отфильтровываем любые неудачные загрузки
   let data = (await Promise.all(dataPromises)).filter(item => item !== null);
-  
-  // Сортируем данные по порядку
   data.sort((a, b) => a.order - b.order);
 
-  // Отображаем данные на странице
+  // Обновление контента
   displayData(data);
 }
-
 
 let exchangeRates = {}; // Переменная для хранения курсов валют
 
@@ -51,7 +78,6 @@ async function fetchExchangeRates() {
     console.error("Ошибка загрузки курсов валют:", error);
   }
 }
-
 
 function displayData(data) {
   const contentDiv = document.getElementById('content');
@@ -118,25 +144,21 @@ function renderLinksCard(item) {
 }
 
 function renderPricingCard(item) {
-  // Проверка, что item.items существует и является массивом
   if (!Array.isArray(item.items)) {
     console.warn("Отсутствует или неверный формат items в item:", item);
     return '';
   }
 
-  // Генерация элементов прайсинга
   const pricingItems = item.items.map(pricing => {
-    // Проверяем, является ли цена модификатором
     const priceContent =
       typeof pricing.price === 'string'
         ? `<div class="pricing-modifier">${pricing.price}</div>`
         : `<div class="pricing-price-container">
-             <div class="pricing-price usd">$${pricing.price}</div>
-             <div class="pricing-price eur">€${(pricing.price * exchangeRates.EUR).toFixed(2)}</div>
-             <div class="pricing-price rub">₽${Math.ceil(pricing.price * exchangeRates.RUB)}</div>
+             <div class="pricing-price">$${pricing.price}</div>
+             <div class="pricing-price">€${(pricing.price * exchangeRates.EUR).toFixed(2)}</div>
+             <div class="pricing-price">₽${Math.ceil(pricing.price * exchangeRates.RUB)}</div>
            </div>`;
 
-    // Обработка ссылок с иконками
     const links = [];
     if (pricing.example_url) {
       links.push(`
@@ -168,7 +190,6 @@ function renderPricingCard(item) {
     `;
   }).join('');
 
-  // Генерация карточки с заголовком и текстами top/bottom
   return `
     <div class="card">
       <div class="card-content">
@@ -184,11 +205,18 @@ function renderPricingCard(item) {
   `;
 }
 
+function initLanguageSelector() {
+  document.querySelectorAll('.language-select a').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const lang = e.target.getAttribute('data-lang'); // Берем язык из data-lang
+      setLanguage(lang);
+    });
+  });
+}
 
-
-// Вызов загрузки данных и курсов валют при загрузке страницы
 document.addEventListener('DOMContentLoaded', async () => {
+  currentLanguage = getLanguageFromURL();
   await fetchExchangeRates();
-  fetchYAMLFiles();
+  setLanguage(currentLanguage);
+  initLanguageSelector();
 });
-

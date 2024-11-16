@@ -1,0 +1,29 @@
+header: Обо мне (многабукав)
+type: text
+content: |
+  <div>
+    indigobx | соъ<span style="position: relative; margin-left: -0.5em;">б</span>ака | 
+    <span class="pan-flag">п</span><span class="pan-flag">а</span><span class="pan-flag">н</span>
+     | GMT+3 | русский (родной) | английский
+  </div>
+  <div>
+  заказы <span class="yes">открыты</span> |
+  коллабы <span class="maybe">обсуждаемо</span> | 
+  трейды <span class="maybe">обсуждаемо</span> | 
+  запросы <span class="maybe">только для друзей</span>
+  </div>
+  <div>
+   <span class="yes">рисую</span>
+    беременность | мпрег | инфляция | бондаж | космос | невесомость и под водой | фембои | кроссдрессинг
+  </div>
+  <div>
+    <span class="yes2">также рисую</span>
+    асфиксию | доминацию | экшн | комиксы | референс-листы | всё, что не в списке "не рисую"
+  </div>
+  <div>
+    <span class="no">не рисую</span>
+    vore | копро | лопание | урофилия | nsfw несовершеннолетних
+    </span>
+  </div>
+icon: fa fa-paw
+icon-color: hotpink

@@ -279,3 +279,36 @@ i.fa {
 .strictly-no {
   color: Thistle;
 }
+
+/* Стиль выбранной кнопки */
+.language-select a {
+  padding: 5px 25px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: background-color 0.8s, opacity 0.8s;
+}
+
+.language-select a:hover {
+  background-color: #546e7a;
+}
+
+.language-select a[style*="opacity: 0.6"] {
+  background-color: transparent;
+  color: inherit;
+}
+
+.language-select a[style*="opacity: 0.6"].en {
+  border-bottom: 2px solid #85b2c7;
+}
+
+.language-select a[style*="opacity: 0.6"].ru {
+  border-bottom: 2px solid #c7859b;
+}
+
+.btn.en {
+  background-color: #37474f;
+}
+
+.btn.ru {
+  background-color: #4f3937;
+}

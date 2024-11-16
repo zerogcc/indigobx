@@ -1,0 +1,20 @@
+header: Галереи
+type: links
+icon: fa-brands fa-chrome
+icon-color: SeaGreen
+links:
+  - name: FurAffinity
+    url: https://www.furaffinity.net/user/indigobx/
+    icon: fa fa-paw
+  - name: Группа в Телеграме
+    url: https://t.me/coffea_iu
+    icon: fa-brands fa-telegram
+  - name: Группа в ВК
+    url: https://t.me/coffea_iu
+    icon: fa-brands fa-vk
+  - name: e621
+    url: https://e621.net/artists/88035
+    icon: fa fa-e
+  - name: X (Твиттер)
+    url: https://twitter.com/uzuridazzle
+    icon: fa-brands fa-x-twitter

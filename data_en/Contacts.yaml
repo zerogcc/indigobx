@@ -1,0 +1,16 @@
+header: Contact me
+type: links
+icon: fa fa-message
+icon-color: DeepSkyBlue
+links:
+  - name: Telegram (preferred way)
+    url: https://t.me/indigobx
+    icon: fa fa-paper-plane
+  - name: PM at FurAffinity
+    url: https://www.furaffinity.net/newpm/indigobx/
+    icon: fa fa-paw
+  - name: Discord (not available atm)
+    url: https://discord.com/users/indigobx
+    icon: fa-brands fa-discord
+    icon-color: Gray
+

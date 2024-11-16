@@ -3,16 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitHub Pages with YAML Data</title>
+  <title>Indigobx Landing Page</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
   <link href="assets/fontawesome/css/all.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="favicon-64.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon-64.png" sizes="16x16">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
+  <script>
+    // Редирект на lang=en, если параметр lang отсутствует
+    const params = new URLSearchParams(window.location.search);
+    if (!params.has('lang')) {
+      params.set('lang', 'en');
+      window.location.replace(`${window.location.pathname}?${params.toString()}`);
+    }
+  </script>
   <script src="main.js" defer></script>
 </head>
 <body>
   <div class="container">
+    <!-- Переключатель языка -->
+    <div class="language-select">
+      <a class="btn en" data-lang="en">English</a>
+      <a class="btn ru" data-lang="ru">Русский</a>
+    </div>
+    <!-- Контент -->
     <div id="content"></div>
   </div>
 </body>
