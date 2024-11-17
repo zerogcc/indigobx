@@ -1,0 +1,98 @@
+header: Terms Of Service
+type: text
+content: |
+  <div class="tos-part">
+    <div class="tos-header">1. Order Placement</div>
+    <div class="tos-element">
+      Orders are accepted through direct messages (contact methods are listed above).<br>
+      Please specify all necessary details: style, number of characters, additional elements (background, crops, etc.).
+    </div>
+  </div>
+
+  <div class="tos-part">
+    <div class="tos-header">2. Payment</div>
+    <div class="tos-element">
+      Prepayment is required:<br>
+      <ul>
+        <li>For orders up to $80, full prepayment is required.</li>
+        <li>For orders over $80, payment can be split into several parts (discussed individually).</li>
+      </ul>
+      Please note:
+      <ul>
+        <li><b>No refunds are available due to technical reasons</b>.</li>
+        <li>Please double-check the payment details before sending. They must match exactly as provided. If you make a mistake with the payment details (e.g., send money through SBP to the wrong bank but with my name), the order will not be considered paid.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tos-part">
+    <div class="tos-header">3. Work Stages</div>
+    <div class="tos-element">
+      <b>Sketches (free, before payment)</b>: At this stage, I provide a rough sketch for approval.<br>
+      After payment, the work proceeds through the following stages:
+      <ol>
+        <li><b>Lineart</b></li>
+        <li><b>Material breakdown and color fill</b></li>
+        <li><b>Adding light/shadows</b></li>
+        <li><b>Effects</b></li>
+        <li><b>Post-processing</b></li>
+      </ol>
+      Revisions can only be made at the current stage. If revisions concern completed stages, additional payment may be required.
+    </div>
+  </div>
+
+  <div class="tos-part">
+    <div class="tos-header">4. Work Features and Final Files</div>
+    <div class="tos-element">
+      If you need a specific image size, format, transparent background, or a print-ready version (e.g., vectorized and in <b>CMYK</b> color space), please specify this in advance.<br>
+      By default, the work is delivered in <b>JPEG</b> format (95% quality), in <b>sRGB</b> color space, with the shorter side around <b>1200-1600 pixels</b>.<br>
+      After the work is completed and you confirm that everything is correct:
+      <ul>
+        <li>The work is published in my galleries (FurAffinity, VK, Telegram) and on e621.</li>
+        <li>You receive a high-quality full-size file and links to the publications.</li>
+      </ul>
+      If you do not want the work to be published on these platforms, please specify this in advance (this may affect the price).
+    </div>
+  </div>
+
+  <div class="tos-part">
+    <div class="tos-header">5. Use of Technologies</div>
+    <div class="tos-element">
+      I may use <b>AI tools</b> for generating textures, references for body parts, icons, and logos. If this is an issue for you, please specify it in advance.
+    </div>
+  </div>
+
+  <div class="tos-part">
+    <div class="tos-header">6. Source Files</div>
+    <div class="tos-element">
+      The source file with layer separation is not included in the order price.<br>
+      If you want to purchase the source file with rights for future modifications, it will cost at least <b>×3 the base order price</b>.<br>
+      If you want to make a modification yourself during the process, I can provide a separate layer in PNG format upon request.
+    </div>
+  </div>
+
+  <div class="tos-part">
+    <div class="tos-header">7. Copyright</div>
+    <div class="tos-element">
+      All rights to the depicted characters belong to their owners.<br>
+      The work remains my intellectual property, and I reserve the right to use it in my portfolio or social media (unless the order is private).<br>
+      You are not allowed to remove the signature from the work or claim it as your own. Editing the final work is only allowed with my consent.
+    </div>
+  </div>
+
+  <div class="tos-part">
+    <div class="tos-header">8. Deadlines</div>
+    <div class="tos-element">
+      The time required to complete the work is discussed individually. If you have a specific deadline, please let me know in advance.
+    </div>
+  </div>
+
+  <div class="tos-part">
+    <div class="tos-header">9. Agreement</div>
+    <div class="tos-element">
+      By paying for the order, you agree to these terms.
+    </div>
+  </div>
+
+icon: fa fa-file-signature
+icon-color: GreenYellow

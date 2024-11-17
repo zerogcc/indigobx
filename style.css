@@ -284,31 +284,111 @@ i.fa {
 .language-select a {
   padding: 5px 25px;
   text-decoration: none;
-  color: #ffffff;
+  color: #888;
   transition: background-color 0.8s, opacity 0.8s;
-}
-
-.language-select a:hover {
-  background-color: #546e7a;
-}
-
-.language-select a[style*="opacity: 0.6"] {
-  background-color: transparent;
-  color: inherit;
-}
-
-.language-select a[style*="opacity: 0.6"].en {
-  border-bottom: 2px solid #85b2c7;
-}
-
-.language-select a[style*="opacity: 0.6"].ru {
-  border-bottom: 2px solid #c7859b;
 }
 
 .btn.en {
   background-color: #37474f;
+  color: #ccc;
 }
 
 .btn.ru {
   background-color: #4f3937;
+  color: #ccc;
+}
+
+.btn.en:hover {
+  background-color: #536c79;
+  border-bottom: 2px solid #85b2c7;
+}
+
+.btn.ru:hover {
+  background-color: #795855;
+  border-bottom: 2px solid #c7859b;
+}
+
+.btn.en.current {
+  background-color: #37474f;
+  border-bottom: 2px solid #85b2c7;
+  color: #85b2c7;
+}
+
+.btn.ru.current {
+  background-color: #4f3937;
+  border-bottom: 2px solid #c7859b;
+  color: #c7859b;
+}
+
+.btn.en.current:hover {
+  background-color: #536c79;
+  border-bottom: 2px solid #85b2c7;
+}
+
+.btn.ru.current:hover {
+  background-color: #795855;
+  border-bottom: 2px solid #c7859b;
+}
+
+.nav-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 5px;
+  padding: 5px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  background-color: #28352c;
+  color: #6b8b79;
+  font-size: 90%;
+  padding-right: 5px;
+  height: max-content;
+}
+
+.nav:hover {
+  background-color: #53796c;
+}
+
+.nav i {
+  font-size: 90%;
+  vertical-align: middle;
+  align-self: center;
+  display: inline;
+  margin: 0 5px;
+  color: inherit;
+}
+
+.tos-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.tos-part {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.tos-header {
+  display: flex;
+  flex-direction: column;
+  font-size: 90%;
+  font-weight: 400;
+  border-bottom: 1px solid #777;
+  color: #aca;
+}
+
+.tos-element {
+  font-weight: 200;
+}
+
+.tos-important {
+  border: 1px solid darkgoldenrod;
+  border-left: 4px solid goldenrod;
+  margin: 0.5em 4em;
+  padding: 0.25em;
 }

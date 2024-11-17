@@ -19,12 +19,14 @@ function setLanguage(lang) {
   document.querySelectorAll('.language-select a').forEach(btn => {
     if (btn.getAttribute('data-lang') === lang) {
       // btn.style.backgroundColor = 'transparent';
-      btn.style.color = 'inherit';
-      btn.style.opacity = '0.6'; // Слабее выделение
+      // btn.style.color = 'inherit';
+      // btn.style.opacity = '0.6'; // Слабее выделение
+      btn.classList.add('current');
     } else {
-      btn.style.backgroundColor = '';
-      btn.style.color = '#ffffff';
-      btn.style.opacity = '1';
+      // btn.style.backgroundColor = '';
+      // btn.style.color = '#ffffff';
+      // btn.style.opacity = '1';
+      btn.classList.remove('current');
     }
   });
 
@@ -42,7 +44,8 @@ async function fetchYAMLFiles() {
     `${folder}/About.yaml`,
     `${folder}/Contacts.yaml`,
     `${folder}/Websites.yaml`,
-    `${folder}/Pricing.yaml`
+    `${folder}/Pricing.yaml`,
+    `${folder}/TOS.yaml`
   ];
 
   const dataPromises = files.map(async (file) => {
@@ -81,7 +84,54 @@ async function fetchExchangeRates() {
 
 function displayData(data) {
   const contentDiv = document.getElementById('content');
-  contentDiv.innerHTML = data.map(item => renderCard(item)).join('');
+  contentDiv.innerHTML = renderNavigation(data, 'top');
+  contentDiv.innerHTML += data.map(item => renderCard(item)).join('');
+  contentDiv.innerHTML += renderNavigation(data, 'bottom');
+}
+
+
+function renderNavigation(data, position) {
+  let navigationHTML = `
+  <div class="card" style="margin-top: 8px;">
+    <div class="nav-content">`
+  data.map(item => {
+    navigationHTML += `
+      <a href="#${item.header}" class="nav">
+      <i class="${item.icon}"></i>
+      ${item.header}
+      </a>
+    `
+  })
+  if (position == 'top') {
+    navigationHTML += `
+      <a href="#bottom" class="nav" id="top">
+        <i class="fa fa-down-long"></i>
+        Bottom
+      </a>
+    `
+  } else {
+    navigationHTML += `
+      <a href="#top" class="nav" id="bottom">
+        <i class="fa fa-up-long"></i>
+        Top
+      </a>
+    `
+  }
+  navigationHTML += `
+    </div>
+  </div>
+  `;
+  let currentYearText = Date.now() < new Date('2025-01-01') ? '' : ` - ${new Date().getFullYear()}`;
+  if (position == 'bottom') {
+    navigationHTML += `
+    <div class="card" style="margin-top: 0 16px;">
+      <div class="nav-content">
+      © 2024${currentYearText} indigobx
+      </div>
+    </div>
+    `
+  }
+  return navigationHTML;
 }
 
 function renderCard(item) {
@@ -100,7 +150,7 @@ function renderCard(item) {
 
 function renderTextCard(item) {
   return `
-    <div class="card">
+    <div class="card" id="${item.header}">
       <div class="card-content">
         <span class="card-title">
           <i class="${item.icon}" style="color: ${item['icon-color']}"></i> ${item.header}
@@ -131,7 +181,7 @@ function renderLinksCard(item) {
   }).join('');
 
   return `
-    <div class="card">
+    <div class="card" id="${item.header}">
       <div class="card-content">
         <span class="card-title">
           ${item.icon ? `<i class="${item.icon}" style="color: ${item['icon-color']}"></i>` : ''}
@@ -191,7 +241,7 @@ function renderPricingCard(item) {
   }).join('');
 
   return `
-    <div class="card">
+    <div class="card" id="${item.header}">
       <div class="card-content">
         <span class="card-title">
           ${item.icon ? `<i class="${item.icon}" style="color: ${item['icon-color']}"></i>` : ''}
